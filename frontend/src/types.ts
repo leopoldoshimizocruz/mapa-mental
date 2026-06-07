@@ -63,6 +63,7 @@ export interface Mapa {
 export interface MapaResumo {
   id: string;
   titulo: string;
+  criadoEm: string | null;
   atualizadoEm: string | null;
 }
 
