@@ -1,0 +1,10 @@
+.superpowers/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.venv/
+data/maps/*.json
+data/assets/*
+!data/maps/.gitkeep
+!data/assets/.gitkeep
