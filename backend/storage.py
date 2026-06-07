@@ -51,6 +51,7 @@ class Storage:
                 MapaResumo(
                     id=data["id"],
                     titulo=data.get("titulo", ""),
+                    criadoEm=data.get("criadoEm"),
                     atualizadoEm=data.get("atualizadoEm"),
                 )
             )

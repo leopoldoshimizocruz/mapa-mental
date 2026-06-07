@@ -18,6 +18,7 @@ def test_criar_lista_e_carregar(store):
     resumos = store.listar()
     assert len(resumos) == 1
     assert resumos[0].id == mapa.id
+    assert resumos[0].criadoEm is not None
     carregado = store.carregar(mapa.id)
     assert carregado.id == mapa.id
 

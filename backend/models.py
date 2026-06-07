@@ -95,4 +95,5 @@ class MapaResumo(BaseModel):
 
     id: str
     titulo: str
+    criadoEm: Optional[str] = None
     atualizadoEm: Optional[str] = None
