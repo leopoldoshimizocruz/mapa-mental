@@ -136,7 +136,7 @@ Cada fase entrega um app usável de ponta a ponta.
 - Zoom/pan, minimapa, controles de zoom.
 - Undo/redo.
 - Salvar/abrir, autosave.
-- Exportar PNG.
+- Exportar via menu "Exportar" no canto direito da barra superior, com as opções PNG (imagem do mapa), PDF (mapa renderizado em página) e TXT (outline indentado da hierarquia). A escolha do formato é do usuário.
 
 ### Fase 2
 - Notas (texto rico), links e imagens nos nós.
@@ -148,7 +148,7 @@ Cada fase entrega um app usável de ponta a ponta.
 - Elementos livres: sticky notes, formas, setas livres, caneta/desenho à mão livre.
 - Múltiplos layouts: organograma e árvore (alternância).
 - Modo apresentação (slides navegando pelos ramos).
-- Exportar PDF e SVG.
+- Exportar SVG (PNG, PDF e TXT já vêm da Fase 1).
 
 ## Erros e segurança de dados
 
