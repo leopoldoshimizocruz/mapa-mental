@@ -1,16 +1,26 @@
+import { useReactFlow } from "@xyflow/react";
 import { useStore } from "../state/store";
 
 export function CreationToolbar() {
   const selecionado = useStore((s) => s.selecionado);
   const adicionarFilho = useStore((s) => s.adicionarFilho);
+  const adicionarIsolado = useStore((s) => s.adicionarIsolado);
+  const { screenToFlowPosition } = useReactFlow();
 
   const addNo = () => {
     if (selecionado) adicionarFilho(selecionado);
   };
 
+  const addIsolado = () => {
+    // cria no centro da área visível atual
+    const pos = screenToFlowPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    adicionarIsolado(pos.x, pos.y);
+  };
+
   return (
     <div style={barra}>
-      <button title="Adicionar nó (Tab)" onClick={addNo} style={btn}>＋</button>
+      <button title="Adicionar nó filho (Tab)" onClick={addNo} style={btn}>＋</button>
+      <button title="Novo nó isolado (sem ligação)" onClick={addIsolado} style={btn}>✦</button>
       <button title="Sticky note (Fase 3)" disabled style={btnOff}>📌</button>
       <button title="Forma (Fase 3)" disabled style={btnOff}>▢</button>
       <button title="Seta (Fase 3)" disabled style={btnOff}>↗</button>

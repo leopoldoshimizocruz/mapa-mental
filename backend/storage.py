@@ -53,6 +53,7 @@ class Storage:
                     titulo=data.get("titulo", ""),
                     criadoEm=data.get("criadoEm"),
                     atualizadoEm=data.get("atualizadoEm"),
+                    qtdNos=len(data.get("nos", [])),
                 )
             )
         resumos.sort(key=lambda r: r.atualizadoEm or "", reverse=True)

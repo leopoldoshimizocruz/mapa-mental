@@ -1,0 +1,210 @@
+{
+  "id": "c151632baa10",
+  "titulo": "TESTE",
+  "criadoEm": "2026-06-07T05:28:32.133326+00:00",
+  "atualizadoEm": "2026-06-07T06:57:55.688247+00:00",
+  "config": {
+    "layout": "radial",
+    "tema": "claro",
+    "corFundo": "#f4f5f7",
+    "padraoFundo": "pontos",
+    "fontePadrao": "Inter",
+    "paletaPadrao": []
+  },
+  "nos": [
+    {
+      "id": "3d1a1a40341f",
+      "paiId": null,
+      "texto": "O que falta dasdasdasdasdas",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 14,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "225cdb0d5fd3",
+      "paiId": "3d1a1a40341f",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "d7dc0a533da1",
+      "paiId": "3d1a1a40341f",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "9310c02ac487",
+      "paiId": "3d1a1a40341f",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "1b39dbdfd1c8",
+      "paiId": "3d1a1a40341f",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "182a05a45578",
+      "paiId": "225cdb0d5fd3",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    }
+  ],
+  "ligacoes": [
+    {
+      "id": "e15411a3c70c",
+      "origem": "3d1a1a40341f",
+      "destino": "225cdb0d5fd3",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "d83f8d49d1e3",
+      "origem": "3d1a1a40341f",
+      "destino": "d7dc0a533da1",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "8f4f9d42e7e1",
+      "origem": "3d1a1a40341f",
+      "destino": "9310c02ac487",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "9181cb3e3253",
+      "origem": "3d1a1a40341f",
+      "destino": "1b39dbdfd1c8",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "4d99211a3afc",
+      "origem": "225cdb0d5fd3",
+      "destino": "182a05a45578",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    }
+  ],
+  "contornos": [],
+  "elementosLivres": []
+}

@@ -16,3 +16,19 @@ export function tempoRelativo(iso: string | null, agora: Date = new Date()): str
   const anos = Math.floor(meses / 12);
   return `há ${anos} ${anos === 1 ? "ano" : "anos"}`;
 }
+
+const FMT = new Intl.DateTimeFormat("pt-BR", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+/** Data absoluta em PT-BR (ex: "07 de jun. de 2026, 14:30"). */
+export function dataAbsoluta(iso: string | null): string {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "—";
+  return FMT.format(d);
+}

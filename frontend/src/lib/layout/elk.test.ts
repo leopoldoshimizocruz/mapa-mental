@@ -18,11 +18,15 @@ describe("calcularLayout", () => {
     expect(typeof pos["a"].x).toBe("number");
   });
 
-  it("respeita posição manual fixada", async () => {
-    const nos: No[] = [no("raiz", null)];
-    nos[0].posicao = { x: 123, y: 456 };
-    const pos = await calcularLayout(nos, [], "radial");
-    expect(pos["raiz"]).toEqual({ x: 123, y: 456 });
+  it("posiciona todos os nós visíveis (posição manual é aplicada depois, em derivarFlow)", async () => {
+    const nos: No[] = [no("raiz", null), no("a", "raiz")];
+    nos[1].posicao = { x: 123, y: 456 }; // manual: o elk ainda posiciona, derivarFlow é quem sobrepõe
+    const ligacoes: Ligacao[] = [
+      { id: "l1", origem: "raiz", destino: "a", tipo: "hierarquia", rotulo: null, estilo: {} },
+    ];
+    const pos = await calcularLayout(nos, ligacoes, "radial");
+    expect(typeof pos["raiz"].x).toBe("number");
+    expect(typeof pos["a"].x).toBe("number");
   });
 
   it("omite descendentes de nó recolhido", async () => {

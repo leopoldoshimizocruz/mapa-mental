@@ -14,13 +14,13 @@ class Tamanho(BaseModel):
 
 
 class EstiloNo(BaseModel):
-    fonte: str = "Inter"
+    fonte: str = "Poppins"
     tamanho: int = 16
     negrito: bool = False
     italico: bool = False
     sublinhado: bool = False
     corTexto: str = "#ffffff"
-    alinhamento: Literal["esquerda", "centro", "direita"] = "centro"
+    alinhamento: Literal["esquerda", "centro", "direita"] = "esquerda"
     formato: Literal[
         "retangulo-arredondado", "pilula", "elipse", "retangulo"
     ] = "retangulo-arredondado"
@@ -74,7 +74,7 @@ class ConfigMapa(BaseModel):
     tema: Literal["claro", "escuro"] = "claro"
     corFundo: str = "#f4f5f7"
     padraoFundo: Literal["pontos", "linhas", "nenhum"] = "pontos"
-    fontePadrao: str = "Inter"
+    fontePadrao: str = "Poppins"
     paletaPadrao: list[str] = Field(default_factory=list)
 
 
@@ -97,3 +97,4 @@ class MapaResumo(BaseModel):
     titulo: str
     criadoEm: Optional[str] = None
     atualizadoEm: Optional[str] = None
+    qtdNos: int = 0

@@ -25,6 +25,14 @@ describe("derivarFlow", () => {
     expect(edges).toHaveLength(1);
   });
 
+  it("posição manual do nó sobrepõe a posição do layout", () => {
+    const nos = [no("raiz", null), no("a", "raiz")];
+    nos[1].posicao = { x: 555, y: 666 };
+    const m = mapa(nos, [{ id: "l1", origem: "raiz", destino: "a", tipo: "hierarquia", rotulo: null, estilo: {} }]);
+    const { nodes } = derivarFlow(m, POS);
+    expect(nodes.find((n) => n.id === "a")!.position).toEqual({ x: 555, y: 666 });
+  });
+
   it("oculta descendentes de nó recolhido", () => {
     const m = mapa(
       [no("raiz", null), no("a", "raiz", true), no("a1", "a")],

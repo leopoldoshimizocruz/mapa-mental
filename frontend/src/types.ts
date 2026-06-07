@@ -48,6 +48,13 @@ export interface ConfigMapa {
   paletaPadrao: string[];
 }
 
+export interface Contorno {
+  id: string;
+  nosIds: string[];
+  cor: string;
+  rotulo: string | null;
+}
+
 export interface Mapa {
   id: string;
   titulo: string;
@@ -56,7 +63,7 @@ export interface Mapa {
   config: ConfigMapa;
   nos: No[];
   ligacoes: Ligacao[];
-  contornos: unknown[];
+  contornos: Contorno[];
   elementosLivres: unknown[];
 }
 
@@ -65,16 +72,17 @@ export interface MapaResumo {
   titulo: string;
   criadoEm: string | null;
   atualizadoEm: string | null;
+  qtdNos: number;
 }
 
 export const ESTILO_PADRAO: EstiloNo = {
-  fonte: "Inter",
+  fonte: "Poppins",
   tamanho: 16,
   negrito: false,
   italico: false,
   sublinhado: false,
   corTexto: "#ffffff",
-  alinhamento: "centro",
+  alinhamento: "esquerda",
   formato: "retangulo-arredondado",
   corBorda: null,
   larguraBorda: 0,

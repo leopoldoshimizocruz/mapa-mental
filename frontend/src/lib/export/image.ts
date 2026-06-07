@@ -36,3 +36,11 @@ export function baixarTxt(titulo: string, conteudo: string): void {
   baixar(url, `${titulo}.txt`);
   URL.revokeObjectURL(url);
 }
+
+/** Baixa um objeto como arquivo .json (backup do mapa). */
+export function baixarJson(titulo: string, dados: unknown): void {
+  const blob = new Blob([JSON.stringify(dados, null, 2)], { type: "application/json;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  baixar(url, `${titulo}.json`);
+  URL.revokeObjectURL(url);
+}

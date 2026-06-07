@@ -1,0 +1,44 @@
+{
+  "id": "c68a70f39ced",
+  "titulo": "Novo mapa",
+  "criadoEm": "2026-06-07T05:26:44.551773+00:00",
+  "atualizadoEm": "2026-06-07T05:26:45.448281+00:00",
+  "config": {
+    "layout": "radial",
+    "tema": "claro",
+    "corFundo": "#f4f5f7",
+    "padraoFundo": "pontos",
+    "fontePadrao": "Inter",
+    "paletaPadrao": []
+  },
+  "nos": [
+    {
+      "id": "d4ca61cb5677",
+      "paiId": null,
+      "texto": "Novo mapa",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Inter",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "centro",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    }
+  ],
+  "ligacoes": [],
+  "contornos": [],
+  "elementosLivres": []
+}
