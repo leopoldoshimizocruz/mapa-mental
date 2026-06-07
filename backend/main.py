@@ -66,3 +66,10 @@ def apagar(map_id: str) -> dict:
     except storage.MapaNaoEncontrado:
         raise HTTPException(status_code=404, detail="Mapa não encontrado")
     return {"ok": True}
+
+
+from fastapi.staticfiles import StaticFiles
+
+_FRONTEND_DIST = Path(__file__).resolve().parents[1] / "frontend" / "dist"
+if _FRONTEND_DIST.exists():
+    app.mount("/", StaticFiles(directory=_FRONTEND_DIST, html=True), name="frontend")
