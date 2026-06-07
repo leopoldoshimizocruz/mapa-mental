@@ -24,6 +24,7 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
   const apagarNo = useStore((s) => s.apagarNo);
   const atualizarNo = useStore((s) => s.atualizarNo);
   const moverNo = useStore((s) => s.moverNo);
+  const alternarRecolhido = useStore((s) => s.alternarRecolhido);
   const { nodes, edges } = useSyncFlow(mapa);
 
   const despachar = useCallback((acao: Acao) => {
@@ -48,6 +49,19 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
   const onNodeDragStop: OnNodeDrag = (_e, node: Node) => {
     moverNo(node.id, node.position.x, node.position.y);
   };
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const alvo = e.target as HTMLElement;
+      if (alvo.tagName === "INPUT" || alvo.tagName === "TEXTAREA") return;
+      if (e.key === " " && selecionado) {
+        e.preventDefault();
+        alternarRecolhido(selecionado);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selecionado, alternarRecolhido]);
 
   // autosave com debounce
   const timer = useRef<number | null>(null);
