@@ -1,8 +1,8 @@
 {
   "id": "bc5916b73ad1",
-  "titulo": "Novo mapa",
+  "titulo": "O QUE FALTA PARA A AUTOMAÇÃO",
   "criadoEm": "2026-06-08T14:05:54.050678+00:00",
-  "atualizadoEm": "2026-06-08T14:24:12.123245+00:00",
+  "atualizadoEm": "2026-06-08T14:30:26.482264+00:00",
   "config": {
     "layout": "radial",
     "tema": "claro",
@@ -24,7 +24,7 @@
       "recolhido": false,
       "posicao": null,
       "tamanho": {
-        "w": 215.0,
+        "w": 231.0,
         "h": 0.0
       },
       "estilo": {
@@ -75,10 +75,7 @@
       "cor": "#e76f51",
       "emoji": null,
       "recolhido": false,
-      "posicao": {
-        "x": 387.0,
-        "y": 215.0
-      },
+      "posicao": null,
       "tamanho": null,
       "estilo": {
         "fonte": "Poppins",

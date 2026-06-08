@@ -2,7 +2,7 @@
   "id": "bc5916b73ad1",
   "titulo": "Novo mapa",
   "criadoEm": "2026-06-08T14:05:54.050678+00:00",
-  "atualizadoEm": "2026-06-08T14:23:50.121865+00:00",
+  "atualizadoEm": "2026-06-08T14:24:38.493283+00:00",
   "config": {
     "layout": "radial",
     "tema": "claro",
@@ -24,12 +24,12 @@
       "recolhido": false,
       "posicao": null,
       "tamanho": {
-        "w": 202.0,
+        "w": 231.0,
         "h": 0.0
       },
       "estilo": {
         "fonte": "Poppins",
-        "tamanho": 16,
+        "tamanho": 20,
         "negrito": false,
         "italico": false,
         "sublinhado": false,
@@ -75,10 +75,7 @@
       "cor": "#e76f51",
       "emoji": null,
       "recolhido": false,
-      "posicao": {
-        "x": 387.0,
-        "y": 215.0
-      },
+      "posicao": null,
       "tamanho": null,
       "estilo": {
         "fonte": "Poppins",

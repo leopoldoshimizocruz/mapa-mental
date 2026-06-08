@@ -142,11 +142,28 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
     };
   }, [mapa, setStatusSalvar]);
 
+  // rede de segurança: avisa antes de fechar a aba com algo pendente e salva ao
+  // desmontar o editor (ex: voltar pra lista), pra não perder a última alteração.
+  useEffect(() => {
+    const aviso = (ev: BeforeUnloadEvent) => {
+      if (useStore.getState().statusSalvar !== "salvo") {
+        ev.preventDefault();
+        ev.returnValue = "";
+      }
+    };
+    window.addEventListener("beforeunload", aviso);
+    return () => {
+      window.removeEventListener("beforeunload", aviso);
+      const m = useStore.getState().mapa;
+      if (m) api.salvar(m).catch(() => {}); // flush ao sair do editor
+    };
+  }, []);
+
   const escuro = mapa?.config.tema === "escuro";
 
   return (
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-      <TopBar onVoltar={onVoltar} />
+      <TopBar onVoltar={onVoltar} onSalvar={salvarAgora} />
       <div
         style={{ flex: 1, position: "relative", background: escuro ? "#11151c" : "#f4f5f7" }}
         onDoubleClick={onPaneDoubleClick}

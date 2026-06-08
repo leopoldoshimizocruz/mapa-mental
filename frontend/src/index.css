@@ -25,6 +25,12 @@ body {
   color: #1f2733;
 }
 
-button {
+/* garante Poppins em TODOS os textos, inclusive controles de formulário
+   (input/button/select/textarea não herdam font-family por padrão) */
+button,
+input,
+select,
+textarea,
+option {
   font-family: inherit;
 }

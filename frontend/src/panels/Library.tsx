@@ -120,7 +120,7 @@ export function Library({ onAbrir }: { onAbrir: (id: string) => void }) {
   );
 }
 
-const pagina: React.CSSProperties = { maxWidth: 880, margin: "48px auto", padding: "0 20px", fontFamily: "Inter, sans-serif" };
+const pagina: React.CSSProperties = { maxWidth: 880, margin: "48px auto", padding: "0 20px", fontFamily: "Poppins, sans-serif" };
 const topo: React.CSSProperties = { display: "flex", alignItems: "center", gap: 14, marginBottom: 28, flexWrap: "wrap" };
 const inputBusca: React.CSSProperties = { flex: 1, minWidth: 180, padding: "11px 14px", border: "1px solid #e0e3e8", borderRadius: 10, fontSize: 14, outline: "none" };
 const btnPrimario: React.CSSProperties = { background: "#5b2be0", color: "#fff", border: "none", borderRadius: 10, padding: "11px 18px", fontWeight: 600, fontSize: 14, cursor: "pointer" };
