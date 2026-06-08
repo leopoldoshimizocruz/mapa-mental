@@ -1,8 +1,8 @@
 {
   "id": "bc5916b73ad1",
-  "titulo": "Novo mapa",
+  "titulo": "O QUE FALTA PARA A AUTOMAÇÃO",
   "criadoEm": "2026-06-08T14:05:54.050678+00:00",
-  "atualizadoEm": "2026-06-08T14:24:35.013863+00:00",
+  "atualizadoEm": "2026-06-08T15:15:47.911645+00:00",
   "config": {
     "layout": "radial",
     "tema": "claro",
@@ -21,7 +21,7 @@
       "imagem": null,
       "cor": "#5b2be0",
       "emoji": null,
-      "recolhido": true,
+      "recolhido": false,
       "posicao": null,
       "tamanho": {
         "w": 231.0,
@@ -141,31 +141,6 @@
       }
     },
     {
-      "id": "e1e6e23d2217",
-      "paiId": "9d01b97712c7",
-      "texto": "",
-      "nota": null,
-      "link": null,
-      "imagem": null,
-      "cor": "#5b2be0",
-      "emoji": null,
-      "recolhido": true,
-      "posicao": null,
-      "tamanho": null,
-      "estilo": {
-        "fonte": "Poppins",
-        "tamanho": 16,
-        "negrito": false,
-        "italico": false,
-        "sublinhado": false,
-        "corTexto": "#ffffff",
-        "alinhamento": "esquerda",
-        "formato": "retangulo-arredondado",
-        "corBorda": null,
-        "larguraBorda": 0
-      }
-    },
-    {
       "id": "76b1653ffd19",
       "paiId": "2902d1b54b12",
       "texto": "Aplicação",
@@ -193,14 +168,17 @@
     {
       "id": "c23157b56081",
       "paiId": "c035de25b361",
-      "texto": "Subir o Claude Code ",
+      "texto": "Subir o Claude Code pra testar a automação",
       "nota": null,
       "link": null,
       "imagem": null,
       "cor": "#5b2be0",
       "emoji": null,
       "recolhido": false,
-      "posicao": null,
+      "posicao": {
+        "x": 607.9570810408779,
+        "y": 133.0
+      },
       "tamanho": null,
       "estilo": {
         "fonte": "Poppins",
@@ -225,7 +203,10 @@
       "cor": "#5b2be0",
       "emoji": null,
       "recolhido": false,
-      "posicao": null,
+      "posicao": {
+        "x": 709.0557828993154,
+        "y": 238.08583791824407
+      },
       "tamanho": null,
       "estilo": {
         "fonte": "Poppins",
@@ -244,6 +225,59 @@
       "id": "01af350faab9",
       "paiId": "ec3e7ff1a618",
       "texto": "2 - Resolver tasks",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "c0c2931030f3",
+      "paiId": "c23157b56081",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": {
+        "x": 954.66935949221,
+        "y": 150.57732256203116
+      },
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "8dd2c27ee180",
+      "paiId": "c035de25b361",
+      "texto": "",
       "nota": null,
       "link": null,
       "imagem": null,
@@ -300,14 +334,6 @@
       "estilo": {}
     },
     {
-      "id": "4031e8759619",
-      "origem": "9d01b97712c7",
-      "destino": "e1e6e23d2217",
-      "tipo": "hierarquia",
-      "rotulo": null,
-      "estilo": {}
-    },
-    {
       "id": "22b7bea1efd4",
       "origem": "2902d1b54b12",
       "destino": "76b1653ffd19",
@@ -335,6 +361,22 @@
       "id": "d3089463f375",
       "origem": "ec3e7ff1a618",
       "destino": "01af350faab9",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "2d1827fe08b0",
+      "origem": "c23157b56081",
+      "destino": "c0c2931030f3",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "db5d30aab03d",
+      "origem": "c035de25b361",
+      "destino": "8dd2c27ee180",
       "tipo": "hierarquia",
       "rotulo": null,
       "estilo": {}

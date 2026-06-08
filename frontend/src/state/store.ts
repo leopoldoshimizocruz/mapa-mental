@@ -222,10 +222,17 @@ export const useStore = create<Estado>()(
           id: novoId(), origem: paiId, destino: no.id,
           tipo: "hierarquia", rotulo: null, estilo: {},
         };
+        // ao criar um nó, re-organiza a árvore inteira (limpa posições manuais e
+        // recalcula o layout) pra nunca haver sobreposição, sem precisar do "Organizar".
         set((st) => st.mapa ? {
-          mapa: { ...st.mapa, nos: [...st.mapa.nos, no], ligacoes: [...st.mapa.ligacoes, lig] },
+          mapa: {
+            ...st.mapa,
+            nos: [...st.mapa.nos.map((n) => ({ ...n, posicao: null })), no],
+            ligacoes: [...st.mapa.ligacoes, lig],
+          },
           selecionado: no.id,
           editando: no.id,
+          versaoLayout: st.versaoLayout + 1,
         } : st);
         return no.id;
       },

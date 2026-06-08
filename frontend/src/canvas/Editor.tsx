@@ -37,6 +37,7 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
   const adicionarRelacao = useStore((s) => s.adicionarRelacao);
   const removerLigacao = useStore((s) => s.removerLigacao);
   const setStatusSalvar = useStore((s) => s.setStatusSalvar);
+  const editando = useStore((s) => s.editando);
   const versaoLayout = useStore((s) => s.versaoLayout);
   const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [selecionados, setSelecionados] = useState<string[]>([]);
@@ -158,6 +159,14 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
       if (m) api.salvar(m).catch(() => {}); // flush ao sair do editor
     };
   }, []);
+
+  // durante a edição inline o texto é gravado ao vivo (pro layout se reorganizar
+  // enquanto digita); pausa o histórico pra a edição inteira contar como 1 undo.
+  useEffect(() => {
+    const t = useStore.temporal.getState();
+    if (editando) t.pause();
+    else t.resume();
+  }, [editando]);
 
   const escuro = mapa?.config.tema === "escuro";
 

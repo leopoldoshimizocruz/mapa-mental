@@ -75,11 +75,17 @@ export function derivarFlow(
   return { nodes: [...grupos, ...mindNodes], edges };
 }
 
-/** Chave que muda só quando a TOPOLOGIA muda (estrutura, recolhimento, layout),
- *  não quando muda posição/texto/estilo. Evita recalcular o layout em arraste/edição. */
+/** Chave que muda quando a estrutura OU o tamanho estimado de algum nó muda
+ *  (criar/apagar/recolher nós, mas também quando o texto/largura/imagem altera o
+ *  tamanho do nó). Assim o layout se auto-reorganiza sem precisar do "Organizar".
+ *  Não muda em arraste (posição), então a movimentação continua fluida. */
 function chaveTopologia(mapa: Mapa): string {
   const partes = mapa.nos
-    .map((n) => `${n.id}:${n.paiId ?? ""}:${n.recolhido ? 1 : 0}`)
+    .map((n) => {
+      const t = estimarTamanho(n);
+      // bucket de ~8px: reorganiza conforme o nó cresce, sem churn por pixel
+      return `${n.id}:${n.paiId ?? ""}:${n.recolhido ? 1 : 0}:${Math.round(t.w / 8)}x${Math.round(t.h / 8)}`;
+    })
     .sort();
   return `${mapa.config.layout}|${partes.join(",")}`;
 }

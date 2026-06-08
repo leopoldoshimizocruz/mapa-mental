@@ -2,7 +2,7 @@
   "id": "bc5916b73ad1",
   "titulo": "O QUE FALTA PARA A AUTOMAÇÃO",
   "criadoEm": "2026-06-08T14:05:54.050678+00:00",
-  "atualizadoEm": "2026-06-08T14:30:22.726454+00:00",
+  "atualizadoEm": "2026-06-08T15:19:41.286648+00:00",
   "config": {
     "layout": "radial",
     "tema": "claro",
@@ -141,31 +141,6 @@
       }
     },
     {
-      "id": "e1e6e23d2217",
-      "paiId": "9d01b97712c7",
-      "texto": "",
-      "nota": null,
-      "link": null,
-      "imagem": null,
-      "cor": "#5b2be0",
-      "emoji": null,
-      "recolhido": true,
-      "posicao": null,
-      "tamanho": null,
-      "estilo": {
-        "fonte": "Poppins",
-        "tamanho": 16,
-        "negrito": false,
-        "italico": false,
-        "sublinhado": false,
-        "corTexto": "#ffffff",
-        "alinhamento": "esquerda",
-        "formato": "retangulo-arredondado",
-        "corBorda": null,
-        "larguraBorda": 0
-      }
-    },
-    {
       "id": "76b1653ffd19",
       "paiId": "2902d1b54b12",
       "texto": "Aplicação",
@@ -193,7 +168,7 @@
     {
       "id": "c23157b56081",
       "paiId": "c035de25b361",
-      "texto": "Subir o Claude Code ",
+      "texto": "Subir o Claude Code pra testar a automação",
       "nota": null,
       "link": null,
       "imagem": null,
@@ -264,6 +239,31 @@
         "corBorda": null,
         "larguraBorda": 0
       }
+    },
+    {
+      "id": "821183f6cebe",
+      "paiId": "c035de25b361",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
     }
   ],
   "ligacoes": [
@@ -300,14 +300,6 @@
       "estilo": {}
     },
     {
-      "id": "4031e8759619",
-      "origem": "9d01b97712c7",
-      "destino": "e1e6e23d2217",
-      "tipo": "hierarquia",
-      "rotulo": null,
-      "estilo": {}
-    },
-    {
       "id": "22b7bea1efd4",
       "origem": "2902d1b54b12",
       "destino": "76b1653ffd19",
@@ -335,6 +327,14 @@
       "id": "d3089463f375",
       "origem": "ec3e7ff1a618",
       "destino": "01af350faab9",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "d9dc1ecd43e2",
+      "origem": "c035de25b361",
+      "destino": "821183f6cebe",
       "tipo": "hierarquia",
       "rotulo": null,
       "estilo": {}

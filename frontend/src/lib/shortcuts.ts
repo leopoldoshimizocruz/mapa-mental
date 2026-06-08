@@ -15,7 +15,6 @@ export function resolverAcao(e: KeyboardEvent): Acao | null {
   if (ctrl && e.key.toLowerCase() === "s") return "salvar";
   if (ctrl) return null;
   if (e.key === "Tab") return "filho";
-  if (e.key === "Enter") return "irmao";
   if (e.key === "Delete" || e.key === "Backspace") return "apagar";
   return null;
 }

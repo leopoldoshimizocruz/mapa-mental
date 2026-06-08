@@ -75,18 +75,24 @@ export function TopBar({ onVoltar, onSalvar }: { onVoltar: () => void; onSalvar:
           onClick={() => definirTema(escuro ? "claro" : "escuro")}
           title={escuro ? "Mudar para tema claro" : "Mudar para tema escuro"}
           style={{
-            position: "relative", width: 50, height: 26, borderRadius: 999, padding: 0,
+            position: "relative", width: 54, height: 28, borderRadius: 999, padding: 0,
             border: "none", cursor: "pointer", flexShrink: 0,
-            background: escuro ? "#5b2be0" : "#cfd4db", transition: "background 0.2s ease",
+            background: escuro
+              ? "linear-gradient(135deg, #4f46e5, #7c3aed)"
+              : "linear-gradient(135deg, #cbd5e1, #e2e8f0)",
+            boxShadow: "inset 0 1px 3px rgba(0,0,0,0.18)",
+            transition: "background 0.25s ease",
           }}
         >
-          <span style={{ position: "absolute", left: 8, top: 0, lineHeight: "26px", fontSize: 12, color: "#fff", opacity: escuro ? 1 : 0, transition: "opacity 0.2s" }}>☾</span>
-          <span style={{ position: "absolute", right: 8, top: 0, lineHeight: "26px", fontSize: 12, color: "#f59e0b", opacity: escuro ? 0 : 1, transition: "opacity 0.2s" }}>☀</span>
           <span style={{
-            position: "absolute", top: 3, left: escuro ? 27 : 3, width: 20, height: 20,
-            borderRadius: "50%", background: "#fff", boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
-            transition: "left 0.2s ease",
-          }} />
+            position: "absolute", top: 3, left: escuro ? 29 : 3, width: 22, height: 22,
+            borderRadius: "50%", background: "#fff",
+            boxShadow: "0 2px 5px rgba(0,0,0,0.28)",
+            display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12,
+            transition: "left 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+          }}>
+            {escuro ? "🌙" : "☀️"}
+          </span>
         </button>
 
         <div style={{ position: "relative" }}>

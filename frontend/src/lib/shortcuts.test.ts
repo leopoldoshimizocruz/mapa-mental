@@ -7,7 +7,7 @@ function ev(p: Partial<KeyboardEvent>): KeyboardEvent {
 
 describe("resolverAcao", () => {
   it("Tab cria filho", () => expect(resolverAcao(ev({ key: "Tab" }))).toBe("filho"));
-  it("Enter cria irmão", () => expect(resolverAcao(ev({ key: "Enter" }))).toBe("irmao"));
+  it("Enter não cria nó", () => expect(resolverAcao(ev({ key: "Enter" }))).toBeNull());
   it("Delete apaga", () => expect(resolverAcao(ev({ key: "Delete" }))).toBe("apagar"));
   it("Ctrl+Z desfaz", () => expect(resolverAcao(ev({ key: "z", ctrlKey: true }))).toBe("undo"));
   it("Ctrl+Shift+Z refaz", () => expect(resolverAcao(ev({ key: "z", ctrlKey: true, shiftKey: true }))).toBe("redo"));

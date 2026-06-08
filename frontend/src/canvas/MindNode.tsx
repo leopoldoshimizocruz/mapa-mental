@@ -24,7 +24,6 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
   const iniciarEdicao = useStore((s) => s.iniciarEdicao);
   const atualizarNo = useStore((s) => s.atualizarNo);
   const adicionarFilho = useStore((s) => s.adicionarFilho);
-  const adicionarIrmao = useStore((s) => s.adicionarIrmao);
   const alternarRecolhido = useStore((s) => s.alternarRecolhido);
   const redimensionarNo = useStore((s) => s.redimensionarNo);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -97,7 +96,7 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
     if (ev.key === "Enter" && !ev.shiftKey) {
       ev.preventDefault();
       confirmar();
-      adicionarIrmao(no.id);
+      iniciarEdicao(null); // Enter só confirma o texto e sai da edição
     } else if (ev.key === "Tab") {
       ev.preventDefault();
       confirmar();
@@ -139,7 +138,10 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
           ref={inputRef}
           autoFocus
           value={valor}
-          onChange={(ev) => setValor(ev.target.value)}
+          onChange={(ev) => {
+            setValor(ev.target.value);
+            atualizarNo(no.id, { texto: ev.target.value }); // grava ao vivo -> layout reorganiza
+          }}
           onFocus={(ev) => ev.currentTarget.select()}
           onKeyDown={onKeyDownInput}
           onBlur={onBlurInput}
