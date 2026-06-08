@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Handle, Position, useReactFlow, type NodeProps } from "@xyflow/react";
 import type { No } from "../types";
 import { useStore } from "../state/store";
@@ -31,7 +31,14 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
   const nodeRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState(false);
   const [larguraPreview, setLarguraPreview] = useState<number | null>(null);
+  const [valor, setValor] = useState(no.texto);
   const { getZoom } = useReactFlow();
+
+  // ao iniciar a edição, sincroniza o valor do input com o texto atual do nó
+  useEffect(() => {
+    if (editando) setValor(no.texto);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editando]);
 
   const larguraAtual = larguraPreview ?? (no.tamanho?.w && no.tamanho.w > 0 ? no.tamanho.w : null);
   const larguraFixa = larguraAtual !== null;
@@ -50,7 +57,7 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
     padding: "8px 16px",
     minWidth: 80,
     width: larguraFixa ? larguraAtual! : undefined,
-    maxWidth: larguraFixa ? undefined : 260,
+    maxWidth: larguraFixa ? undefined : (editando ? 620 : 260),
     whiteSpace: larguraFixa ? "normal" : undefined,
     wordBreak: larguraFixa ? "break-word" : undefined,
     boxShadow: selected ? "0 0 0 3px #3b5bdb88" : "0 1px 3px #0002",
@@ -82,8 +89,7 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
   };
 
   const confirmar = () => {
-    const v = inputRef.current?.value ?? "";
-    atualizarNo(no.id, { texto: v });
+    atualizarNo(no.id, { texto: valor });
   };
 
   const onKeyDownInput = (ev: React.KeyboardEvent<HTMLInputElement>) => {
@@ -132,7 +138,8 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
         <input
           ref={inputRef}
           autoFocus
-          defaultValue={no.texto}
+          value={valor}
+          onChange={(ev) => setValor(ev.target.value)}
           onFocus={(ev) => ev.currentTarget.select()}
           onKeyDown={onKeyDownInput}
           onBlur={onBlurInput}
@@ -144,8 +151,10 @@ export function MindNode({ data, selected }: NodeProps & { data: MindNodeData })
             color: e.corTexto,
             font: "inherit",
             textAlign: "inherit",
-            width: `${Math.max(6, (no.texto.length || 6))}ch`,
+            // cresce conforme o usuário digita (a caixa do nó expande junto)
+            width: larguraFixa ? "100%" : `${Math.max(4, valor.length + 1)}ch`,
             minWidth: 60,
+            maxWidth: larguraFixa ? undefined : 560,
           }}
         />
       ) : (

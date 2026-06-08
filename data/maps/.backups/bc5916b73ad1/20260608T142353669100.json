@@ -1,0 +1,348 @@
+{
+  "id": "bc5916b73ad1",
+  "titulo": "Novo mapa",
+  "criadoEm": "2026-06-08T14:05:54.050678+00:00",
+  "atualizadoEm": "2026-06-08T14:23:52.129946+00:00",
+  "config": {
+    "layout": "radial",
+    "tema": "claro",
+    "corFundo": "#f4f5f7",
+    "padraoFundo": "pontos",
+    "fontePadrao": "Poppins",
+    "paletaPadrao": []
+  },
+  "nos": [
+    {
+      "id": "d92cc62468ab",
+      "paiId": null,
+      "texto": "O QUE FALTA AINDA",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": {
+        "w": 193.0,
+        "h": 0.0
+      },
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "9d01b97712c7",
+      "paiId": "d92cc62468ab",
+      "texto": "Materiais dos clientes",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#e76f51",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "c035de25b361",
+      "paiId": "d92cc62468ab",
+      "texto": "AWS",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#e76f51",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": {
+        "x": 387.0,
+        "y": 215.0
+      },
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "ec3e7ff1a618",
+      "paiId": "d92cc62468ab",
+      "texto": "System Prompt",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#e76f51",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "2902d1b54b12",
+      "paiId": "9d01b97712c7",
+      "texto": "1 - Automatizar, antecipar e melhorar a qualidade dos materiais",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "e1e6e23d2217",
+      "paiId": "9d01b97712c7",
+      "texto": "",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": true,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "76b1653ffd19",
+      "paiId": "2902d1b54b12",
+      "texto": "Aplicação",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "c23157b56081",
+      "paiId": "c035de25b361",
+      "texto": "Subir o Claude Code ",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "3c7f27cb32d6",
+      "paiId": "ec3e7ff1a618",
+      "texto": "1 - Analisar tasks",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    },
+    {
+      "id": "01af350faab9",
+      "paiId": "ec3e7ff1a618",
+      "texto": "2 - Resolver tasks",
+      "nota": null,
+      "link": null,
+      "imagem": null,
+      "cor": "#5b2be0",
+      "emoji": null,
+      "recolhido": false,
+      "posicao": null,
+      "tamanho": null,
+      "estilo": {
+        "fonte": "Poppins",
+        "tamanho": 16,
+        "negrito": false,
+        "italico": false,
+        "sublinhado": false,
+        "corTexto": "#ffffff",
+        "alinhamento": "esquerda",
+        "formato": "retangulo-arredondado",
+        "corBorda": null,
+        "larguraBorda": 0
+      }
+    }
+  ],
+  "ligacoes": [
+    {
+      "id": "579b6371c354",
+      "origem": "d92cc62468ab",
+      "destino": "9d01b97712c7",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "f1165c362408",
+      "origem": "d92cc62468ab",
+      "destino": "c035de25b361",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "7d1e1d6c7bca",
+      "origem": "d92cc62468ab",
+      "destino": "ec3e7ff1a618",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "b2149e65d4dc",
+      "origem": "9d01b97712c7",
+      "destino": "2902d1b54b12",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "4031e8759619",
+      "origem": "9d01b97712c7",
+      "destino": "e1e6e23d2217",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "22b7bea1efd4",
+      "origem": "2902d1b54b12",
+      "destino": "76b1653ffd19",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "a05a349791c3",
+      "origem": "c035de25b361",
+      "destino": "c23157b56081",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "863c063ee795",
+      "origem": "ec3e7ff1a618",
+      "destino": "3c7f27cb32d6",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    },
+    {
+      "id": "d3089463f375",
+      "origem": "ec3e7ff1a618",
+      "destino": "01af350faab9",
+      "tipo": "hierarquia",
+      "rotulo": null,
+      "estilo": {}
+    }
+  ],
+  "contornos": [],
+  "elementosLivres": []
+}

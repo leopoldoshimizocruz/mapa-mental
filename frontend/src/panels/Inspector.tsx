@@ -145,32 +145,6 @@ export function Inspector() {
       </div>
 
       <div style={secao}>
-        <div style={tamanhoTopo}>
-          <span style={{ ...label, marginBottom: 0 }}>Borda</span>
-          <span style={valorChip}>{e.larguraBorda}px</span>
-        </div>
-        <input
-          type="range"
-          min={0}
-          max={8}
-          value={e.larguraBorda}
-          onChange={(ev) => atualizarEstilo(no.id, { larguraBorda: Number(ev.target.value) })}
-          style={{ width: "100%", accentColor: "#5b2be0" }}
-        />
-        {e.larguraBorda > 0 && (
-          <div style={{ ...linha, marginTop: 8 }}>
-            {PALETA.map((c) => (
-              <button
-                key={c}
-                onClick={() => atualizarEstilo(no.id, { corBorda: c })}
-                style={{ width: 22, height: 22, borderRadius: "50%", background: c, border: e.corBorda === c ? "2px solid #1f2733" : "1px solid #ccc", cursor: "pointer" }}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div style={secao}>
         <span style={label}>Fonte</span>
         <select
           value={e.fonte}

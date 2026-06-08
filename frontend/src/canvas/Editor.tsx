@@ -27,7 +27,6 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
   const apagarNo = useStore((s) => s.apagarNo);
   const iniciarEdicao = useStore((s) => s.iniciarEdicao);
   const moverNo = useStore((s) => s.moverNo);
-  const alternarRecolhido = useStore((s) => s.alternarRecolhido);
   const adicionarIsolado = useStore((s) => s.adicionarIsolado);
   const copiar = useStore((s) => s.copiar);
   const colar = useStore((s) => s.colar);
@@ -126,19 +125,6 @@ function EditorInterno({ onVoltar }: { onVoltar: () => void }) {
     const pos = screenToFlowPosition({ x: ev.clientX, y: ev.clientY });
     adicionarIsolado(pos.x, pos.y);
   };
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const alvo = e.target as HTMLElement;
-      if (alvo.tagName === "INPUT" || alvo.tagName === "TEXTAREA") return;
-      if (e.key === " " && selecionado) {
-        e.preventDefault();
-        alternarRecolhido(selecionado);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [selecionado, alternarRecolhido]);
 
   // autosave com debounce + status (salvando/salvo/erro)
   const timer = useRef<number | null>(null);

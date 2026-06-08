@@ -87,7 +87,6 @@ sobem pro Git (estão no `.gitignore`).
 |--------|------|
 | `Tab` | novo nó filho |
 | `Enter` | novo nó irmão |
-| `Espaço` | recolher / expandir o ramo |
 | `Delete` / `Backspace` | apagar o(s) nó(s) selecionado(s) |
 | duplo-clique no nó | editar o texto inline |
 | duplo-clique no vazio | criar um nó isolado ali |
